@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+</head>
+<body>
+   <script>
+       function Person(firstName, lastName){
+           this.firstName = firstName; // 1st property
+           this.lastName = lastName; // 2nd property
+           this.sayHello = function (name) {
+               console.info(`Hello ${name} my name is ${this.firstName}`)
+           }
+       }
+
+       const character1 = new Person("Gallick", "Gun");
+       const character2 = new Person("Super", "Gogeta");
+
+       // add property to prototype
+
+       Person.prototype.sayBye = function(){
+           console.info("Goodbye!")
+       }
+
+       Person.prototype.isVerified = function(){
+           console.info(`${this.firstName} is verified`)
+       }
+       console.log(character1);
+       console.log(character2);
+       
+   </script> 
+</body>
+</html>
