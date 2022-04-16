@@ -3,22 +3,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>property in constructor function</title>
+    <title>property and method in constructor function</title>
 </head>
 <body>
    <script>
        function Person(){
            this.firstName = ""; // 1st property
            this.lastName = ""; // 2nd property
+           this.sayHello = function (name) {
+               console.info(`Hello ${name} my name is ${this.firstName}`)
+           }
        }
 
        const character1 = new Person();
        character1.firstName = "Gallick";
        character1.lastName = "Gun";
+       character1.sayHello("Buddy");
 
        const character2 = new Person();
        character2.firstName = "Super";
        character2.lastName = "Gogeta";
+       character2.sayHello("John")
 
        console.log(character1)
        cons
