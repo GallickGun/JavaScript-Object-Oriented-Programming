@@ -3,19 +3,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Constructor in Class</title>
+    <title>method in Class</title>
 </head>
 <body>
     <script>
         class Person {
             constructor(name){
                 this.name = name;
-                console.info(`Hi, my name is ${name}`)
+                
+            }
+
+            sayHello(name) {
+                console.info(`Just saying hello to you, ${name}. My name is ${this.name}`)
             }
         }
 
         const gallick = new Person("Gun");
         console.info(gallick);
+        gallick.sayHello("GG");
+
+        const cell = new Person("Cell II");
+        console.info(cell);
+        cell.sayHello("Cowboy");
     </script>
 </body>
 </html>
